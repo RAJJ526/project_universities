@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokul University</title>
+   <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <h1>Gokul University</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="{% url 'myabout'%}" >About</a></li>
+                    <li><a href="{% url 'mycourse'%}">Courses</a></li>
+                    <li><a href="{% url 'myadmission' %}">Admissions</a></li>
+                    <li><a href="{% url 'mynews' %}">News & Events</a></li>
+                    <li><a href="{% url 'mycontact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Gokul University</h2>
+            <p>Empowering Minds, Creating Futures</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Gokul University is a leading educational institution committed to providing quality education and fostering research and innovation. With a rich history and a vibrant campus, we offer a wide range of undergraduate, postgraduate, and doctoral programs.</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="course-list">
+                <div class="course">
+                    <h3>Engineering</h3>
+                    <p>Explore our top-notch engineering programs designed to shape the innovators of tomorrow.</p>
+                </div>
+                <div class="course">
+                    <h3>Business Administration</h3>
+                    <p>Master the art of management with our comprehensive business administration courses.</p>
+                </div>
+                <div class="course">
+                    <h3>Computer Science</h3>
+                    <p>Dive into the world of technology with our cutting-edge computer science programs.</p>
+                </div>
+                <div class="course">
+                    <h3>Humanities</h3>
+                    <p>Engage with diverse cultures and ideas through our humanities programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="admissions">
+        <div class="container">
+            <h2>Admissions</h2>
+            <p>Join Gokul University and become part of a community that values excellence, creativity, and diversity. Our admissions process is designed to identify talented students who are passionate about learning and contributing to society.</p>
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <h2>News & Events</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <h3>University Convocation 2024</h3>
+                    <p>Join us for the 2024 convocation ceremony to celebrate the achievements of our graduates.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Research Symposium</h3>
+                    <p>Attend our annual research symposium where students and faculty present their groundbreaking research.</p>
+                </div>
+                <div class="news-item">
+                    <h3>New Course Offerings</h3>
+                    <p>Discover our new courses in data science, artificial intelligence, and sustainable development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information about our programs, admissions, and campus life.</p>
+            <p>Email: info@gokuluniversity.edu | Phone: +123 456 7890</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gokul University. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="/static/index.js" ></script>
+</body>
+</html>

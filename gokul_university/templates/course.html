@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/course.css">
+</head>
+<body>
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <p class="section-description">Explore the diverse range of academic programs offered at Gokul University. Whether you are looking to start your undergraduate journey, pursue postgraduate studies, or engage in research, we have a program for you.</p>
+            
+            <!-- Course Categories -->
+            <div class="course-categories">
+                <button class="category-btn active" onclick="filterCourses('all')">All</button>
+                <button class="category-btn" onclick="filterCourses('undergraduate')">Undergraduate</button>
+                <button class="category-btn" onclick="filterCourses('postgraduate')">Postgraduate</button>
+                <button class="category-btn" onclick="filterCourses('doctoral')">Doctoral</button>
+            </div>
+            
+            <!-- Course List -->
+            <div class="course-list">
+                <!-- Undergraduate Courses -->
+                <div class="course-item undergraduate">
+                    <h3>Bachelor of Engineering (B.E.)</h3>
+                    <p>This program is designed to provide students with a strong foundation in engineering principles and hands-on experience in various engineering disciplines such as Mechanical, Electrical, Civil, and Computer Engineering.</p>
+                </div>
+                <div class="course-item undergraduate">
+                    <h3>Bachelor of Business Administration (B.B.A.)</h3>
+                    <p>The B.B.A. program prepares students for leadership roles in business and management, covering areas such as finance, marketing, and entrepreneurship.</p>
+                </div>
+                <div class="course-item undergraduate">
+                    <h3>Bachelor of Science (B.Sc.)</h3>
+                    <p>Our B.Sc. programs cover a wide range of scientific disciplines, including Physics, Chemistry, Biology, and Environmental Science, with a strong emphasis on research and practical applications.</p>
+                </div>
+    
+                <!-- Postgraduate Courses -->
+                <div class="course-item postgraduate">
+                    <h3>Master of Business Administration (M.B.A.)</h3>
+                    <p>The M.B.A. program is designed for professionals looking to advance their careers in business and management. The curriculum includes advanced courses in strategy, leadership, and international business.</p>
+                </div>
+                <div class="course-item postgraduate">
+                    <h3>Master of Computer Applications (M.C.A.)</h3>
+                    <p>This program focuses on advanced computer science concepts, software development, and IT management. Graduates are well-prepared for roles in software engineering, system analysis, and IT consultancy.</p>
+                </div>
+                <div class="course-item postgraduate">
+                    <h3>Master of Science (M.Sc.)</h3>
+                    <p>Our M.Sc. programs offer specializations in various scientific fields, allowing students to deepen their knowledge and engage in research projects that address real-world challenges.</p>
+                </div>
+    
+                <!-- Doctoral Courses -->
+                <div class="course-item doctoral">
+                    <h3>Doctor of Philosophy (Ph.D.) in Engineering</h3>
+                    <p>The Ph.D. program in Engineering is research-intensive, offering students the opportunity to contribute to the advancement of knowledge in their chosen field. Areas of research include nanotechnology, renewable energy, and artificial intelligence.</p>
+                </div>
+                <div class="course-item doctoral">
+                    <h3>Doctor of Philosophy (Ph.D.) in Sciences</h3>
+                    <p>Our Ph.D. programs in the sciences cover a broad spectrum of disciplines, including Biology, Chemistry, and Environmental Science. Students engage in cutting-edge research with the guidance of experienced faculty.</p>
+                </div>
+                <div class="course-item doctoral">
+                    <h3>Doctor of Philosophy (Ph.D.) in Humanities</h3>
+                    <p>The Ph.D. in Humanities program allows students to explore complex social, cultural, and philosophical issues through interdisciplinary research. Areas of study include History, Literature, and Philosophy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function filterCourses(category) {
+            var courses = document.getElementsByClassName('course-item');
+            for (var i = 0; i < courses.length; i++) {
+                if (category === 'all' || courses[i].classList.contains(category)) {
+                    courses[i].style.display = 'block';
+                } else {
+                    courses[i].style.display = 'none';
+                }
+            }
+            var buttons = document.getElementsByClassName('category-btn');
+            for (var j = 0; j < buttons.length; j++) {
+                buttons[j].classList.remove('active');
+            }
+            document.querySelector('.category-btn[onclick="filterCourses(\'' + category + '\')"]').classList.add('active');
+        }
+        window.onload = function() {
+            filterCourses('all');
+        };
+        </script>
+            
+</body>
+</html>
