@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.news-events-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.tab-button.active {
+    background-color: #2980b9;
+}
+
+.tab-button:hover {
+    background-color: #2980b9;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    text-align: left;
+}
+
+.news-item, .event-item {
+    margin-bottom: 30px;
+}
+
+.news-item h3, .event-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.news-item .date, .event-item .date {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.news-item p, .event-item p {
+    font-size: 1em;
+}
+
+a.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.cta-button:hover {
+    background-color: #c0392b;
+}
